@@ -5,12 +5,144 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--fonts and icons linked below-->
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!--tailwind css below-->
+
         <link rel="stylesheet" href="../public/style.css">
-        <title>Document</title>
+        <title>Tailwind Dashboard</title>
     </head>
 
-    <body class="text-5xl text-red-500">
-        Hello world
+    <body class="font-montserrat text-fontclr">
+        <!--left fixed navigation section-->
+        <nav class="fixed left-0 h-screen w-1/4 md:w-1/5 bg-fgcolor border-r-2 border-fontclr">
+
+            <p class="text-xs text-fontclr-active font-bold ml-1 mt-3 md:ml-3 lg:ml-5 lg:mt-5 md:text-xl lg:text-3xl"><i
+                    class="fa fa-columns"></i> Dashboard</p>
+
+            <ul class="text-[8px] lg:text-xl mt-14">
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 fa fa-home ml-1 md:ml-3 lg:ml-5"></i> Home
+                </li>
+
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-address-card-o"></i> Profile
+                </li>
+
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-comments"></i> Messages
+                </li>
+
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-clock-o"></i> History
+                </li>
+
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-files-o"></i> Tasks
+                </li>
+
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-group"></i> Communities
+                </li>
+            </ul>
+
+            <ul class="text-[8px] lg:text-xl mt-14">
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-gear"></i> Settings
+                </li>
+
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-question-circle"></i> Support
+                </li>
+
+                <li
+                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-shield"></i> Privacy
+                </li>
+            </ul>
+
+        </nav>
+
+
+        <header class="h-28 w-3/4 md:w-4/5 right-0 fixed bg-fgcolor border-b-2 border-fontclr">
+
+            <!-- top-half of the header -->
+            <div class="w-full h-2/5 flex justify-between items-center px-3 md:px-4">
+
+                <div class="flex items-center w-1/2"> <!--search box-->
+                    <i class="fa fa-search mr-3 md:mr-5"></i>
+                    <input type="text"
+                        class="rounded-full bg-fontclr w-full mr-3 md:mr-0 text-fontclr-active text-xs focus:outline-0 px-2" />
+                </div>
+
+                <div class="flex items-center h-full"> <!--corner info container-->
+
+                    <i class="fa fa-bell-o"></i>
+
+                    <div class="flex h-full items-center justify-center"> <!--user info corner-->
+                        <img src="../assets/images/profile-pic.png" alt="user.jpg" class="mx-2 md:mx-4 h-3/5" />
+                        <!--user photo-->
+                        <span class="text-fontclr-active text-[9px] md:text-lg whitespace-nowrap right font-bold">Pranav
+                            Sinha</span> <!--user name-->
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- bottom half of the header -->
+            <div class="flex h-3/5 justify-between px-3 md:px-4">
+
+                <div class="flex h-full items-center"> <!--greeting section container-->
+
+                    <img src="../assets/images/profile-pic.png" alt="user.jpg" class="h-3/4 mr-2 md:mr-4">
+
+                    <div class="h-full flex flex-col justify-center"> <!--greeting secion-->
+                        <p class="text-[10px] md:text-sm">Hi there,</p>
+                        <p class="text-xs md:text-xl font-bold text-fontclr-active flex flex-wrap"><!--user info-->
+                            <span class="">
+                                Pranav Sinha
+                            </span>
+                            <span class="">
+                                (@pran01)
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-around items-center text-[10px] md:text-lg">
+                    <!--buttons container-->
+                    <button
+                        class="w-14 md:w-20 h-4 md:h-8 md:ml-3 border rounded-full border-fontclr flex justify-center items-center ">New</button>
+                    <button
+                        class="w-14 md:w-20 h-4 md:h-8 md:ml-3 border rounded-full border-fontclr flex justify-center items-center ">Upload</button>
+                    <button
+                        class="w-14 md:w-20 h-4 md:h-8 md:ml-3 border rounded-full border-fontclr flex justify-center items-center ">Share</button>
+                </div>
+
+            </div>
+
+        </header>
+        <main class="w-full h-screen bg-bgcolor">
+
+        </main>
     </body>
 
 </html>
