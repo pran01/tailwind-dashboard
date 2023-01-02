@@ -1,0 +1,25 @@
+let navBarBtn = document.getElementById("navbar-btn");
+let navBar = document.querySelector("nav");
+let navBarTitle = document.querySelector(".navbar-title");
+let navList = document.querySelector(".nav-list");
+let helpList = document.querySelector(".help-list");
+let header = document.querySelector("header");
+let toggleIcon = document.querySelector(".toggle-icon");
+navBarBtn.addEventListener("click", () => {
+  navBarTitle.classList.toggle("hidden");
+  navList.classList.toggle("hidden");
+  helpList.classList.toggle("hidden");
+  navBar.classList.toggle("w-[22px]");
+  navBar.classList.toggle("w-screen");
+  header.classList.toggle("hidden");
+  toggleIcon.classList.toggle("fa-chevron-right");
+  toggleIcon.classList.toggle("fa-chevron-left");
+  navBar.classList.toggle("flex");
+  navBar.classList.toggle("flex-col");
+  helpList.classList.toggle("flex");
+  helpList.classList.toggle("flex-col");
+  helpList.classList.toggle("items-center");
+  navList.classList.toggle("flex");
+  navList.classList.toggle("flex-col");
+  navList.classList.toggle("items-center");
+});

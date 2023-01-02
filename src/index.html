@@ -23,64 +23,69 @@
 
     <body class="font-montserrat text-fontclr bg-bgcolor">
         <!--left fixed navigation section-->
-        <nav class="fixed left-0 h-screen w-1/4 md:w-1/5 bg-fgcolor border-r-2 border-fontclr">
+        <nav class="fixed left-0 h-screen w-[22px] md:w-1/5 bg-fgcolor border-r-2 border-fontclr md:block">
+            <button id="navbar-btn"
+                class="absolute right-0 top-1/2 md:hidden w-6 h-6 rounded-full border-fontclr flex items-center justify-center">
+                <i class="fa fa-chevron-right text-xl toggle-icon"></i>
+            </button>
+            <p
+                class="navbar-title hidden md:flex items-center text-2xl text-fontclr-active font-bold ml-10 mt-5 md:ml-3 lg:ml-4 lg:mt-5 lg:text-2xl">
+                <i class="fa fa-columns mr-2 md:mr-4"></i> Dashboard
+            </p>
 
-            <p class="text-xs text-fontclr-active font-bold ml-1 mt-3 md:ml-3 lg:ml-5 lg:mt-5 md:text-xl lg:text-3xl"><i
-                    class="fa fa-columns"></i> Dashboard</p>
-
-            <ul class="text-[8px] lg:text-xl mt-14">
+            <ul class="nav-list hidden md:block text-xl mt-14 w-full">
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 fa fa-home ml-1 md:ml-3 lg:ml-5"></i> Home
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 fa fa-home ml-10 md:ml-3 lg:ml-5"></i> Home
                 </li>
 
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-address-card-o"></i> Profile
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-address-card-o"></i> Profile
                 </li>
 
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-comments"></i> Messages
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-comments"></i> Messages
                 </li>
 
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-clock-o"></i> History
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-clock-o"></i> History
                 </li>
 
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-files-o"></i> Tasks
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-files-o"></i> Tasks
                 </li>
 
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-group"></i> Communities
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-group"></i> Communities
                 </li>
             </ul>
 
-            <ul class="text-[8px] lg:text-xl mt-14">
+            <ul class="help-list hidden md:block text-xl mt-14 w-full">
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-gear"></i> Settings
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-gear"></i> Settings
                 </li>
 
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-question-circle"></i> Support
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-question-circle"></i> Support
                 </li>
 
                 <li
-                    class="cursor-pointer w-full h-8 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
-                    <i class="w-4 lg:w-8 ml-1 md:ml-3 lg:ml-5 fa fa-shield"></i> Privacy
+                    class="cursor-pointer w-full h-12 hover:bg-fgcolor-active hover:text-fontclr-active hover:border-l-2 hover:border-iconclr-active flex items-center">
+                    <i class="w-10 ml-10 md:ml-3 lg:ml-5 fa fa-shield"></i> Privacy
                 </li>
             </ul>
 
         </nav>
 
 
-        <header class="h-28 w-3/4 md:w-4/5 right-0 fixed bg-fgcolor border-b-2 border-fontclr">
+        <header class="h-28 left-[22px] md:left-auto md:w-4/5 right-0 fixed bg-fgcolor border-b-2 border-fontclr">
 
             <!-- top-half of the header -->
             <div class="w-full h-2/5 flex justify-between items-center px-3 md:px-4">
@@ -127,7 +132,7 @@
 
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-around items-center text-[10px] md:text-lg">
+                <div class="flex flex-col md:flex-row justify-around items-center text-[10px] md:text-[14px]">
                     <!--buttons container-->
                     <button
                         class="w-14 md:w-20 h-4 md:h-8 md:ml-3 border rounded-full border-fontclr flex justify-center items-center ">New</button>
@@ -140,7 +145,8 @@
             </div>
 
         </header>
-        <main class="flex flex-wrap justify-between w-3/4 md:w-4/5 float-right mt-28 bg-bgcolor p-3 md:p-4">
+        <main
+            class="flex flex-wrap justify-between md:w-4/5 float-left md:float-right mt-28 ml-[22px] bg-bgcolor p-3 md:p-4">
 
 
             <!--section for projects-->
@@ -336,6 +342,7 @@
 
             </div>
         </main>
+        <script src="../public/scripts/navbar.js"></script>
     </body>
 
 </html>
