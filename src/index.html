@@ -23,14 +23,14 @@
 
     <body class="font-montserrat text-fontclr bg-bgcolor">
         <!--left fixed navigation section-->
-        <nav class="fixed left-0 h-screen w-[22px] md:w-1/5 bg-fgcolor border-r-2 border-fontclr md:block">
-            <button id="navbar-btn"
-                class="absolute right-0 top-1/2 md:hidden w-6 h-6 rounded-full border-fontclr flex items-center justify-center">
-                <i class="fa fa-chevron-right text-xl toggle-icon"></i>
-            </button>
+        <nav class="fixed w-screen left-0 h-screen hidden md:w-1/5 bg-fgcolor border-r-2 border-fontclr md:block">
+
             <p
-                class="navbar-title hidden md:flex items-center text-2xl text-fontclr-active font-bold ml-10 mt-5 md:ml-3 lg:ml-4 lg:mt-5 lg:text-2xl">
+                class="navbar-title hidden md:flex items-center w-full text-2xl text-fontclr-active font-bold ml-10 mt-5 md:ml-3 lg:ml-4 lg:mt-5 lg:text-2xl">
                 <i class="fa fa-columns mr-2 md:mr-4"></i> Dashboard
+                <button class="md:hidden absolute navbar-close-btn text-3xl">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
             </p>
 
             <ul class="nav-list hidden md:block text-xl mt-14 w-full">
@@ -85,11 +85,14 @@
         </nav>
 
 
-        <header class="h-28 left-[22px] md:left-auto md:w-4/5 right-0 fixed bg-fgcolor border-b-2 border-fontclr">
+        <header class="h-28 left-0 md:left-auto md:w-4/5 right-0 fixed bg-fgcolor border-b-2 border-fontclr">
 
             <!-- top-half of the header -->
             <div class="w-full h-2/5 flex justify-between items-center px-3 md:px-4">
-
+                <button id="navbar-btn"
+                    class="right-0 top-1/2 md:hidden w-6 h-6 rounded-full border-fontclr flex items-center justify-center">
+                    <i class="fa fa-bars text-xl toggle-icon"></i>
+                </button>
                 <div class="flex items-center w-1/2"> <!--search box-->
                     <i class="fa fa-search mr-3 md:mr-5"></i>
                     <input type="text"
@@ -146,7 +149,7 @@
 
         </header>
         <main
-            class="flex flex-wrap justify-between md:w-4/5 float-left md:float-right mt-28 ml-[22px] bg-bgcolor p-3 md:p-4">
+            class="flex flex-wrap justify-between md:w-4/5 float-left md:float-right mt-28 ml-0 bg-bgcolor p-3 md:p-4">
 
 
             <!--section for projects-->
